@@ -180,7 +180,7 @@ int main()
     system("pause"); // somente no Windows
     // Espera o usuário pressionar uma tecla.
 
-    cout << "Exercício 1" <<
+    cout << "Exercício 1" << endl;
     
 	cout << "================" << endl;
 
@@ -190,6 +190,7 @@ int main()
     cout << "short max = " << SHRT_MAX << "\n";
 
     //Ao somar 1 ao INT_MAX, o valor excede o limite do tipo int, causando overflow. Normalmente o resultado exibido é INT_MIN, mas tecnicamente o C++ considera essa operação comportamento indefinido.
+    double celsius = 0.0;
 
 	cout << "Digite a temperatura em Celsius: ";
 	cin >> celsius;
@@ -224,5 +225,34 @@ int main()
         << horas << " horas, "
         << minutos << " minutos e "
         << segundosRestantes << " segundos." << endl;
+
+	cout << "================" << endl;
+    
+    cout << "Qualquer tecla para ir para o proximo exercicio...";
+    system("pause");
+
+    system("cls");
+
+    cout << "Exercicio 4 - Ponteiro na Pratica" << endl;
+    cout << "===================================" << endl;
+
+    int numero = 21;
+    cout << "1) Valor da variavel numero = " << numero << endl;
+
+    cout << "2) Endereco da variavel (&numero) = " << &numero << endl;
+
+    int* ptrNumero = &numero;
+    cout << "3) Ponteiro int* ptrNumero declarado, apontando para numero." << endl;
+
+    *ptrNumero = *ptrNumero * 2;
+    cout << "4) Valor alterado atraves do ponteiro (*ptrNumero *= 2)." << endl;
+
+    cout << "5) Novo valor da variavel original (sem usar o ponteiro): " << numero << endl;
+
+    cout << endl << endl;
+    cout << "Fim do programa. Qualquer tecla para sair...";
+    system("pause");
+
+    return 0;
 }
 // Fim da função main.
